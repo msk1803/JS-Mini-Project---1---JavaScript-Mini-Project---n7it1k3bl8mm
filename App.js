@@ -6,12 +6,13 @@ for (let item of buttons) {
     // eslint-disable-next-line no-loop-func
     item.addEventListener('click', (e)=>{
        let buttonText = e.target.innerText;
+       
         if (buttonText === 'X'&&screen.value!==""){
             buttonText = '*';
             screenValue = screen.value+buttonText;
             screen.value = screenValue;
         }
-        else if (buttonText === 'X'){
+        else  if (buttonText === 'X'){
             buttonText = '*';
             screenValue += buttonText;
             screen.value = screenValue;
@@ -21,17 +22,19 @@ for (let item of buttons) {
             screen.value = screenValue;
         }
         else if (buttonText === '=') {
+            
             // eslint-disable-next-line no-eval
             screen.value = eval(screenValue);
             
             
         }
-         else if(screen.value!=="") {
+        else if(screen.value!=="") {
             screenValue =screen.value+buttonText;
             screen.value = screenValue;
-        else {
-            screenValue += buttonText;
-            screen.value = screenValue;
+        }
+        else{
+            screenValue+=buttonText;
+            screen.value=screenValue;
         }
 
     })
