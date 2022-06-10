@@ -22,6 +22,9 @@ for (let item of buttons) {
             
             
         }
+         else if(screen.value!=="") {
+            screenValue =screen.value+buttonText;
+            screen.value = screenValue;
         else {
             screenValue += buttonText;
             screen.value = screenValue;
