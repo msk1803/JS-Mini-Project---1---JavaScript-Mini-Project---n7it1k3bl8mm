@@ -6,8 +6,12 @@ for (let item of buttons) {
     // eslint-disable-next-line no-loop-func
     item.addEventListener('click', (e)=>{
        let buttonText = e.target.innerText;
-       
-        if (buttonText === 'X'){
+        if (buttonText === 'X'&&screen.value!==""){
+            buttonText = '*';
+            screenValue = screen.value+buttonText;
+            screen.value = screenValue;
+        }
+        else if (buttonText === 'X'){
             buttonText = '*';
             screenValue += buttonText;
             screen.value = screenValue;
