@@ -2,6 +2,7 @@ let screen = document.getElementById('screen');
 let buttons = document.querySelectorAll('button');
 let screenValue = '';
 
+
 for (let item of buttons) {
     // eslint-disable-next-line no-loop-func
     item.addEventListener('click', (e)=>{
@@ -39,3 +40,9 @@ for (let item of buttons) {
 
     })
 }
+
+
+function calc(){
+    screenValue=document.getElementById("screen").value;
+    screen.value = eval(screenValue);
+ }
