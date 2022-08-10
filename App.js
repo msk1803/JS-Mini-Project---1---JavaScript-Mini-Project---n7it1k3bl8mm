@@ -42,7 +42,3 @@ for (let item of buttons) {
 }
 
 
-function calc(){
-    screenValue=document.getElementById("screen").value;
-   
- }
